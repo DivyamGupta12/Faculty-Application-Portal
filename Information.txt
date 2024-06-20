@@ -1,0 +1,22 @@
+About the repo -
+The repo has a folder dbback, docker files, er diagram files, and the pdf output file
+
+dbback folder -
+this folder contains all the frontend-backend code of the website. The files_proj folder contains the files that were entered into the website. The fpdf186 folder contains the tools that were used to generate the pdf
+
+Using the docker files -
+
+The docker file uses the latest official php image, which can be downloaded from the docker hub
+after setting up docker open the files and run the following commands in the terminal opened in the file location
+
+docker build -t my-php-app .
+
+docker run -d -p 8080:80 --name my-php-container my-php-app
+
+#note - my-php-app can be replaced with other names too
+
+After you have the YAML file, run this command
+
+docker-compose up -d
+
+Now, you should have your PHP, MySQL, and Apache containers up and running. You can access your PHP application by visiting http://localhost:8080 in your web browser.
